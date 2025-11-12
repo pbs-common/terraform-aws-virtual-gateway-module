@@ -1,5 +1,5 @@
 module "mesh" {
-  source = "github.com/pbs/terraform-aws-app-mesh-module?ref=0.0.1"
+  source = "github.com/pbs-common/terraform-aws-app-mesh-module?ref=0.0.30"
 
   organization = var.organization
   environment  = var.environment
@@ -16,5 +16,6 @@ module "vgw" {
   organization = var.organization
   environment  = var.environment
   product      = var.product
+  owner        = var.owner
   repo         = var.repo
 }

@@ -23,6 +23,7 @@ func testVirtualGateway(t *testing.T, variant string) {
 	terraformOptions := &terraform.Options{
 		TerraformDir: terraformDir,
 		LockTimeout:  "5m",
+		Upgrade:      true,
 	}
 
 	terraformTargetMeshOptions := &terraform.Options{
@@ -31,6 +32,7 @@ func testVirtualGateway(t *testing.T, variant string) {
 			"module.mesh",
 		},
 		LockTimeout: "5m",
+		Upgrade:     true,
 	}
 
 	defer terraform.Destroy(t, terraformOptions)
