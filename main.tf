@@ -15,7 +15,7 @@ resource "aws_appmesh_virtual_gateway" "gateway" {
 }
 
 module "envoy_service" {
-  source = "github.com/pbs/terraform-aws-ecs-service-module?ref=11.2.3"
+  source = "github.com/pbs/terraform-aws-ecs-service-module?ref=12.0.4"
 
   name = local.name
 
